@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import math as mt
+from scipy.special import eval_legendre
+from scipy import integrate
+import pandas as pd
+import csv
+
+n0=20
+for sc in range(0,20):
+  s=0.20
+  for i in range(0,6):
+      name=round(s*100)
+      sstr=str(name)+str(n0)+'gmcgb.txt'
+      if(i<=5):
+          gaf_dict[i]=np.loadtxt(sstr,skiprows=1,usecols=0,delimiter=',  ')
+      if(i==6):
+          gaf_dict[6]=gaf_dict[5]
+      gaf=gaf_dict[i]
+      plt.plot()
+  gaf_dict.clear()
+  n0=n0+20
